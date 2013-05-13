@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>pixi.js example</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: lightblue;
+		}
+		canvas {
+		  position: fixed;
+		  top: 50%;
+		  left: 50%;
+		  margin-left: -160px;
+		  margin-top: -120px;
+		  border: 1px solid white;
+		  background-color: #000;
+		}
+	</style>
+	<script src="js/pixi.js"></script>
+	<script src="js/sphere.js"></script>
+</head>
+<body>
+	<script>
+		Sphere.verbose = true;
+		var image = LoadImage("blockman.png");
+		var font = GetSystemFont();	
+		
+		var up = true;
+		var i = 0, j = 0;
+		var x = 0, y = 0;
+		var color = CreateColor(255, 255, 255, 125);
+		var red = CreateColor(255, 0, 0);
+		
+		function game() {
+			image.blitMask(120 + j, 64, color);
+			image.blit(x, y);
+			
+			if (IsMouseButtonPressed(MOUSE_LEFT)) {
+				x = GetMouseX();
+				y = GetMouseY();
+			}
+			
+			j += up ? 1 : -1;
+			if (up && j == 64) up = false;
+			if (!up && j == 0) up = true;
+			
+			if (IsKeyPressed(KEY_UP)) { y--; }
+			if (IsKeyPressed(KEY_DOWN)) { y++; }
+			if (IsKeyPressed(KEY_LEFT)) { x--; }
+			if (IsKeyPressed(KEY_RIGHT)) { x++; }
+			
+			//Rectangle(0, GetScreenHeight()-32, GetScreenWidth(), 32, red);
+			font.drawText(4, GetScreenHeight()-30, "Mouse Click: Set image position.");
+			font.drawText(4, GetScreenHeight()-15, "Arrow Keys: Move image around.");			
+		}
+	
+		if (Sphere.init(320, 240, game)) console.log("Game: sphere loaded success!");
+	</script>
+</body>
+</html>
