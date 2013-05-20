@@ -1,19 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Express 2012 for Web
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "sphere-three", "..\sphere-three", "{3D1B79D2-BD3F-4AAC-ADDA-CA60879A65BF}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "web-sphere", "..\web-sphere", "{3D1B79D2-BD3F-4AAC-ADDA-CA60879A65BF}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
-		Debug.AspNetCompiler.VirtualPath = "/sphere-three"
-		Debug.AspNetCompiler.PhysicalPath = "..\sphere-three\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\sphere-three\"
+		Debug.AspNetCompiler.VirtualPath = "/web-sphere"
+		Debug.AspNetCompiler.PhysicalPath = "..\web-sphere\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\web-sphere\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/sphere-three"
-		Release.AspNetCompiler.PhysicalPath = "..\sphere-three\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\sphere-three\"
+		Release.AspNetCompiler.VirtualPath = "/web-sphere"
+		Release.AspNetCompiler.PhysicalPath = "..\web-sphere\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\web-sphere\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"

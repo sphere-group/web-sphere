@@ -1,10 +1,12 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Sphere</title>
-<script src="three.js"></script>
-<script src="sphere.js"></script>
-<script type="x-shader/x-vertex" id="vertexshader">
+    <title>Sphere</title>
+    <script src="three.js"></script>
+    <script src="renderer.js"></script>
+    <script src="sphere.js"></script>
+    <script type="x-shader/x-vertex" id="vertexshader">
+
 attribute vec4 rgba;
 varying vec4 vColor;
 varying highp vec2 vTextureCoord;
@@ -15,8 +17,9 @@ void main() {
     gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
 }
 
-</script>
-<script type="x-shader/x-fragment" id="fragmentshader">
+    </script>
+    <script type="x-shader/x-fragment" id="fragmentshader">
+
 uniform sampler2D texture;
 varying vec4 vColor;
 varying highp vec2 vTextureCoord;
@@ -26,14 +29,15 @@ void main() {
     gl_FragColor = gl_FragColor;// * texture2D( texture, vTextureCoord );
 
 }
-</script>
+    </script>
 
 </head>
 <body>
-<script>
+    <script>
 
-Sphere.run();
+        Renderer.init();
+        Sphere.run();
 
-</script>
+    </script>
 </body>
 </html>
